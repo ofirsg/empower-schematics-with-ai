@@ -40,3 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+/src/generators/**/*.js.map
+/src/generators/**/*.js
+/src/generators/**/*.d.ts
+/src/app/**/*.chat-history.html
+/src/generators/environment/environment.ts
+/src/generators/image-to-component-generator/images/

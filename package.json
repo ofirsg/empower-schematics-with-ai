@@ -1,20 +1,26 @@
 {
   "name": "empower-schematics-with-ai",
   "version": "0.0.0",
+  "schematics": "./src/generators/collection.json",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
+    "build-schematics": "tsc -p tsconfig.schematics.json",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "image-to-component-generator": "npm run build-schematics && schematics .:image-to-component-generator --dry-run=false",
+    "new-tool-generator": "npm run build-schematics && schematics .:new-tool-generator --dry-run=false"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
+    "@angular/cdk": "^18.2.4",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",
     "@angular/forms": "^18.2.0",
+    "@angular/material": "^18.2.4",
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
@@ -24,15 +30,20 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.2",
-    "@angular/cli": "^18.2.2",
+    "@angular-devkit/schematics": "18.2.3",
     "@angular/compiler-cli": "^18.2.0",
+    "@google/generative-ai": "0.21.0",
     "@types/jasmine": "~5.1.0",
+    "inquirer": "12.0.1",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.3.3",
+    "terser": "5.31.6",
+    "ts-mocks": "3.0.1",
     "typescript": "~5.5.2"
   }
 }

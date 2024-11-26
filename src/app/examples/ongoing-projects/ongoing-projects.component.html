@@ -1,0 +1,19 @@
+<div class="ongoing-projects-container">
+  <div class="ongoing-projects-header">
+    <h2 class="ongoing-projects-title">Ongoing Projects</h2>
+    <button mat-button class="all-projects-button">All Projects</button>
+  </div>
+  <div class="projects-container">
+    <mat-card *ngFor="let project of ongoingProjects().projects" class="project-card">
+      <div class="project-header">
+        <img class="project-icon" [src]="project.icon" alt="Project icon">
+        <h3 class="project-name">{{ project.name }}</h3>
+      </div>
+      <p class="project-description">{{ project.description }}</p>
+      <div class="project-details">
+        <p class="project-detail">{{ project.details[0] }}</p>
+        <span class="project-date">{{ project.details[1] }}</span>
+      </div>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "image-to-component-generator": {
+      "description": "Generate new component based on image input",
+      "factory": "./image-to-component-generator/index#imageToComponentGenerator",
+      "schema": "./image-to-component-generator/schema.json"
+    },
+    "new-tool-generator": {
+      "description": "Generate new tool",
+      "factory": "./new-tool-generator/index#newToolGenerator",
+      "schema": "./new-tool-generator/schema.json"
+    }
+  }
+}

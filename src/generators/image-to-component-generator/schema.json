@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "ImageToComponentGenerator",
+  "title": "Generate new component based on image input",
+  "type": "object",
+  "properties": {
+    "imagePath": {
+      "type": "string",
+      "description": "Image Path",
+      "x-prompt": "What is the path of the image?"
+    },
+    "imageDescription": {
+      "type": "string",
+      "description": "Describe the image and the component the tool should create",
+      "x-prompt": "Please add a short description for the image content"
+    },
+    "pathToCreate": {
+      "type": "string",
+      "description": "Path to create",
+      "x-prompt": "What is the path to create the new component?"
+    }
+  },
+  "required": ["imagePath", "pathToCreate"]
+}
